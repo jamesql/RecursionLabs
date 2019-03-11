@@ -17,7 +17,7 @@ public class labs {
 		labs t = new labs();
 	}
 	
-	public labs() {
+	labs() {
 		// Outputs
 		System.out.println("Exp ("+ powerBase + "^" + powerExp + ") : " + power(powerBase, powerExp));
 		System.out.println("digitCount (" + digitC + ") : " + digitCount(digitC));
