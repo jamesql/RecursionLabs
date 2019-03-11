@@ -1,17 +1,24 @@
 public class labs {
 
+	// Number of Fibonacci numbers to output
 	int numbersOutput = 5;
+	// Count the amount of digits in this int
 	int digitC = 1434;
+	// Count the sums of these digits
 	int sumDig = 2816;
   
-  int powerBase = 5;
-  int powerExp = 6;
+	// Base used in Power Method
+  	int powerBase = 5;
+	// Exp used in Power Method
+  	int powerExp = 6;
 	
 	public static void main(String[] args) {
+		// Use constructor
 		labs t = new labs();
 	}
 	
 	public labs() {
+		// Outputs
 		System.out.println("Exp ("+ powerBase + "^" + powerExp + ") : " + power(powerBase, powerExp));
 		System.out.println("digitCount (" + digitC + ") : " + digitCount(digitC));
 		System.out.println("sumDigits (" + sumDig + ") : " + sumDigits(sumDig));
@@ -21,6 +28,7 @@ public class labs {
 		}
 	}
 	
+	// Recursive Fib method
 	public int fib(int n)  {
 	    if(n == 0)
 	        return 0;
@@ -30,18 +38,21 @@ public class labs {
 	      return fib(n - 1) + fib(n - 2);
 	}
 	
+	// Recursive digitCount method
 	public int digitCount(int n) {
 		if (n < 10) return 1;
 		else
 		return digitCount(n/10) + 1;
 	}
 	
+	// Recursive sumDigits method
 	public int sumDigits(int n) {
 		if (n < 10) return n;
 		else
 		return sumDigits(n/10) + (n % 10);
 	}
 	
+	// Recursive power method
 	public int power(int base, int exo) {
 		if (exo == 1) return base;
 		else
