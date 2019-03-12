@@ -14,7 +14,18 @@ public class labs {
 	
 	// Factorial to be calculated
 	int factorial = 7;
-
+	
+	// Count this number in countNumber
+	int numberToCount = 7;
+	// Number given to countNumber
+	int numberToSearch = 761297;
+	
+	// Used in changeXY method
+	String contentToReplace = "hiyxxiyyxx";
+	// Replace this char in contentToReplace
+	String replaceThis = "x";
+	// Replace with this
+	String replaceWith = "y";
 	
 	public static void main(String[] args) {
 		// Use constructor
@@ -26,6 +37,8 @@ public class labs {
 		System.out.println("Exp ("+ powerBase + "^" + powerExp + ") : " + power(powerBase, powerExp));
 		System.out.println("digitCount (" + digitC + ") : " + digitCount(digitC));
 		System.out.println("sumDigits (" + sumDig + ") : " + sumDigits(sumDig));
+		System.out.println("Replace (" + contentToReplace + ") : " + changeXY(contentToReplace));
+		System.out.println("Count (" + numberToCount + " in " + numberToSearch + ") : " + countNumber(numberToSearch));
 		System.out.println("!Factorial (!" + factorial + ") : " + f(factorial));
 		System.out.print("Fib Numbers (" + numbersOutput + ") : ");
 		for (int x = 0; x < numbersOutput; x++) {
@@ -71,4 +84,23 @@ public class labs {
 		if (n == 1) return 1;
 			else
 				return n * f(n-1);
+	}
+	
+	// Recursive count number method
+	public int countNumber(int n) {
+		  if (n > 10)
+		    if (n%10 == numberToCount) 
+		      return countNumber(n/10) + 1; 
+		    else
+		      return countNumber(n/10);
+		    else if (n == numberToCount) return 1;
+		      else return 0;
+	}
+	
+	// Recursive replace method
+	public String changeXY(String str) {
+		  int ind = str.indexOf(replaceThis);
+		    if (ind != -1)
+		        return changeXY(str.substring(0,ind) + replaceWith + str.substring(ind+1, str.length()));
+		    else return str;
 	}
