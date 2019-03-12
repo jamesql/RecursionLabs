@@ -104,3 +104,4 @@ public class labs {
 		        return changeXY(str.substring(0,ind) + replaceWith + str.substring(ind+1, str.length()));
 		    else return str;
 	}
+}
