@@ -5,4 +5,4 @@ Recursion Labs for AP CS A
 ```Exp (5^6) : 15625
 digitCount (1434) : 4
 sumDigits (2816) : 17
-Fib Numbers (12) : 0, 1, 1, 2, 3,
+Fib Numbers (5) : 0, 1, 1, 2, 3,
